@@ -370,14 +370,31 @@
         <p>Claude.ai 계정(Pro, Max, Team, Enterprise 중 하나) 또는 Claude Console 계정이 필요합니다. 무료 플랜에는 클로드 코드가 포함되지 않으니, 회사에서 제공하는 계정이 있다면 그걸 사용하세요.</p>
       </div>
       <div class="setup-step">
-        <h4>터미널 열기</h4>
+        <h4>방법 고르기 — 터미널 vs VS Code</h4>
+        <p>클로드 코드를 시작하는 방법은 한 가지가 아닙니다. 아래 둘 중 편한 쪽으로 고르면 됩니다. 이 페이지의 나머지 설명(세션, <span class="mono">/clear</span> 같은 명령어)은 <b>둘 다에서 똑같이 동작</b>합니다 — 화면 생김새만 다를 뿐입니다.</p>
+        <div class="intro-grid" style="margin-top:16px;">
+          <div class="info-card">
+            <h4># 터미널 (PowerShell / Git Bash)</h4>
+            <p>검은 화면에 글자로 명령을 침. 별도 설치 없이 시작 가능. 아래 2~5번 단계 그대로 따라가면 됩니다.</p>
+          </div>
+          <div class="info-card">
+            <h4># VS Code 확장 프로그램</h4>
+            <p>옆 사이드바에 채팅창처럼 뜸. 코드 변경 부분이 색깔로 표시돼서 눈에 편함. 터미널이 낯설다면 이쪽을 추천합니다.</p>
+          </div>
+        </div>
+        <div class="stage-callout" style="margin-top:16px;margin-bottom:0;">
+          <b>VS Code로 시작하는 법</b> — ① VS Code 열기 → ② <span class="mono">Ctrl+Shift+X</span>(맥은 <span class="mono">Cmd+Shift+X</span>)로 확장 프로그램 창 열기 → ③ "Claude Code" 검색 → <b>Anthropic</b>이 배포한 공식 확장(체크마크 있는 것) 설치 → ④ 아무 파일이나 하나 열면 화면 위쪽에 <span class="mono">✱</span>(스파크) 아이콘이 생기는데, 그걸 클릭하면 시작됩니다. 설치가 끝나면 아래 "연습용 폴더 만들기"는 건너뛰고 (VS Code에서 폴더를 열면 되므로), <b>바로 아래 "핵심 명령어 익히기"</b>로 넘어가도 됩니다.
+        </div>
+      </div>
+      <div class="setup-step">
+        <h4>터미널 열기 <span style="font-weight:400;color:var(--text-dim);font-size:13px;">— VS Code를 선택했다면 건너뛰기</span></h4>
         <p>맥(Mac)은 <span class="mono">Spotlight(Cmd+Space)</span>에서 "터미널"을 검색, 윈도우는 시작 메뉴에서 "PowerShell"을 검색해서 엽니다. 검은(또는 흰) 화면에 깜빡이는 커서만 있으면 잘 연 겁니다. <b>앞으로 이 페이지에 나오는 모든 명령어는 전부 이 창에 입력합니다.</b></p>
         <div class="stage-callout" style="margin-top:14px;margin-bottom:0;">
           <b>Git Bash를 쓰셔도 됩니다</b> — 윈도우에 Git을 설치할 때 같이 깔리는 별도 터미널 프로그램인데, PowerShell과 다른 프로그램이지만 이 실습에는 똑같이 써도 무방합니다. 오히려 Git Bash를 쓰면 아래 설치 명령어를 <b>PowerShell용이 아니라 macOS/Linux용 그대로</b> 입력하면 됩니다. 아무 폴더에서 우클릭 → "Git Bash Here"로 열 수 있습니다.
         </div>
       </div>
       <div class="setup-step">
-        <h4>클로드 코드 설치</h4>
+        <h4>클로드 코드 설치 <span style="font-weight:400;color:var(--text-dim);font-size:13px;">— VS Code를 선택했다면 건너뛰기</span></h4>
         <p>운영체제와 터미널에 맞는 명령어 한 줄을 그대로 붙여넣고 엔터를 누르면 됩니다.</p>
         <span class="os-tab-label">macOS / Linux / WSL / Git Bash</span>
         <div class="code-block">curl -fsSL https://claude.ai/install.sh | bash</div>
@@ -388,6 +405,7 @@
       </div>
       <div class="setup-step">
         <h4>연습용 폴더 하나 만들기</h4>
+        <p style="margin-bottom:10px;"><span class="mono">VS Code를 선택했다면</span> — 왼쪽 위 "Open Folder"로 아무 빈 폴더나 열어두면 이 단계는 끝입니다. <span class="mono">터미널을 선택했다면</span> — 아래 명령어대로 진행하세요.</p>
         <p>실습은 아무 파일이나 있는 빈 폴더에서 해도 충분합니다. 아래 명령어로 바탕화면에 연습용 폴더를 하나 만들고 그 안으로 들어갑니다. (이미 연습할 프로젝트 폴더가 있다면 이 단계는 건너뛰어도 됩니다.)</p>
         <div class="code-block">cd Desktop
 mkdir vibe-practice
